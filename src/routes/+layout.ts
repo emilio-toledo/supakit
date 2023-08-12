@@ -3,8 +3,8 @@ import {
 	PUBLIC_SUPABASE_URL,
 } from "$env/static/public";
 import type { Database } from "$supabase/types/schema";
-import { createSupabaseLoadClient } from "@supabase/auth-helpers-sveltekit";
 import type { LayoutLoad } from "./$types";
+import { createSupabaseLoadClient } from "@supabase/auth-helpers-sveltekit";
 
 export const load = (async ({ fetch, data, depends }) => {
 	depends("supabase:auth");
