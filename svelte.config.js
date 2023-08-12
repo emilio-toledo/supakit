@@ -18,6 +18,9 @@ const config = {
 			},
 			assets: "src/assets",
 		},
+		alias: {
+			$supabase: "supabase",
+		},
 	},
 };
 
