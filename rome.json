@@ -8,5 +8,8 @@
 		"rules": {
 			"recommended": true
 		}
+	},
+	"files": {
+		"ignore": [".svelte-kit", "node_modules", "test-vault", "build"]
 	}
 }
