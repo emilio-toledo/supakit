@@ -1,7 +1,7 @@
-import { error, json } from "@sveltejs/kit";
-import type { RequestHandler } from "./$types";
-import parseFormData from "$lib/utils/parseFormData";
 import type UserCredentials from "$lib/schemas/userCredentials";
+import parseFormData from "$lib/utils/parseFormData";
+import type { RequestHandler } from "./$types";
+import { error, json } from "@sveltejs/kit";
 
 export const POST = (async ({ request, locals }) => {
 	const data = await request.formData().catch(() => {
