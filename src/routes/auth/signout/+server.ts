@@ -1,5 +1,5 @@
-import { error, json } from "@sveltejs/kit";
 import type { RequestHandler } from "./$types";
+import { error, json } from "@sveltejs/kit";
 
 export const GET = (async ({ locals }) => {
 	const session = await locals.getSession();
