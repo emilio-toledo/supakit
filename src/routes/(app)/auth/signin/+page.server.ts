@@ -1,6 +1,6 @@
 import { UserCredentials } from "$lib/schemas/userCredentials";
-import type { AuthTokenResponse } from "@supabase/supabase-js";
 import type { PageServerLoad } from "./$types";
+import type { AuthTokenResponse } from "@supabase/supabase-js";
 import { type Actions, fail, redirect } from "@sveltejs/kit";
 import { setError, superValidate } from "sveltekit-superforms/server";
 
