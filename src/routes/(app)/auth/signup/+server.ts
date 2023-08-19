@@ -1,4 +1,4 @@
-import type UserCredentials from "$lib/schemas/userCredentials";
+import type { UserCredentials } from "$lib/schemas/userCredentials";
 import parseFormData from "$lib/utils/parseFormData";
 import type { RequestHandler } from "./$types";
 import { error, json } from "@sveltejs/kit";
