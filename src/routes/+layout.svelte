@@ -3,6 +3,7 @@
 
     import { invalidate } from "$app/navigation";
     import { onMount } from "svelte";
+    import Container from "$lib/components/Container.svelte";
 
     export let data;
 
@@ -21,5 +22,10 @@
         return () => subscription.unsubscribe();
     });
 </script>
+
+<nav class="flex justify-between p-4">
+    <a href="/">Supakit</a>
+    <a href="/auth/signin">Sign In</a>
+</nav>
 
 <slot />
