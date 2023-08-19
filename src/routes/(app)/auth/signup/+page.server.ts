@@ -18,12 +18,12 @@ export const actions = {
 
 		const { email, password } = form.data;
 
-		const { error } = await locals.supabase.auth.signInWithPassword({
+		const { error } = await locals.supabase.auth.signUp({
 			email,
 			password,
 		});
 
-		if (error) return setError(form, "password", error.message);
+		if (error) return setError(form, "email", error.message);
 
 		return { form };
 	},

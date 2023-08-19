@@ -24,8 +24,20 @@
 </script>
 
 <nav class="flex justify-between p-4">
-    <a href="/">Supakit</a>
-    <a href="/auth/signin">Sign In</a>
+    <div>
+        <a href="/">Supakit</a>
+    </div>
+
+    {#if !session}
+        <div class="space-x-4">
+            <a href="/auth/signin">Sign In</a>
+            <a href="/auth/signup">Sign Up</a>
+        </div>
+    {:else}
+        <div class="space-x-4">
+            <a href="/auth/signout">Sign Out</a>
+        </div>
+    {/if}
 </nav>
 
 <slot />

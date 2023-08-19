@@ -1,5 +1,5 @@
 import type { RequestHandler } from "./$types";
-import { error, json } from "@sveltejs/kit";
+import { error, json, redirect } from "@sveltejs/kit";
 
 export const GET = (async ({ locals }) => {
 	const session = await locals.getSession();
@@ -10,5 +10,5 @@ export const GET = (async ({ locals }) => {
 		throw error(400, err);
 	});
 
-	return json({ message: `${session.user.email} signed out successfully.` });
+	throw redirect(303, "/");
 }) satisfies RequestHandler;
