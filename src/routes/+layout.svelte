@@ -35,7 +35,9 @@
         </div>
     {:else}
         <div class="space-x-4">
-            <a href="/auth/signout">Sign Out</a>
+            <form action="/auth/signout" method="post">
+                <input type="submit" value="Sign out" />
+            </form>
         </div>
     {/if}
 </nav>

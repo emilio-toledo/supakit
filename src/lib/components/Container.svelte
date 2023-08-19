@@ -1,7 +1,7 @@
 <script lang="ts">
-    let classes = $$restProps.class ?? "";
+    let classeName = $$restProps.class ?? "";
 </script>
 
-<main class={`flex-grow text-text p-4 ${classes}`.trim()}>
+<main class={classeName}>
     <slot />
 </main>
